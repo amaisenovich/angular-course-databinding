@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
-import { Listener } from 'src/models/Listener';
-import { Subscribe } from 'src/models/Subscribe';
-import { Notify } from 'src/models/Notify';
+import { Subscribe } from 'src/app/event-bus/subscribe.type';
+import { Notify } from 'src/app/event-bus/notify.type';
 
 @Component({
   selector: 'app-root',
@@ -9,25 +8,15 @@ import { Notify } from 'src/models/Notify';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  listeners: { [eventName: string]: Listener[] } = {}
+  subscribe: Subscribe = null;
 
-  subscribe: Subscribe = (eventName, callback) => {
-    this.listeners[eventName] = this.listeners[eventName] ? this.listeners[eventName] : [];
-    this.listeners[eventName] = [
-      ...this.listeners[eventName],
-      callback
-    ];
+  notify: Notify = null;
 
-    return () => {
-      this.listeners[eventName] = this.listeners[eventName].filter(l => l == callback)
-    }
+  getSubscribe = (subscribe: Subscribe) => {
+    this.subscribe = subscribe
   }
 
-  notify: Notify = (eventName: string, ...args: any[]) => {
-    if (!this.listeners[eventName]) {
-      return
-    }
-
-    this.listeners[eventName].forEach(l => l(args));
+  getNotify = (notify: Notify) => {
+    this.notify = notify
   }
 }

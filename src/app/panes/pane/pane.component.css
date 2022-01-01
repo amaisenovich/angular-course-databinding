@@ -1,0 +1,11 @@
+.list-group-item {
+  display: inline-flex;
+  border-radius: 5px;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  font-weight: bold;
+}

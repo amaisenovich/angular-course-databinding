@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { Notify } from 'src/models/Notify';
-import { Event } from 'src/enums/Event';
+import { Notify } from 'src/app/event-bus/notify.type';
+import { Event } from 'src/app/event-bus/event.enum';
 
 const GAME_TICK_INTERVAL_MS = 100
 

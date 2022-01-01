@@ -1,3 +1,4 @@
+<app-event-bus (getSubscribe)="getSubscribe($event)" (getNotify)="getNotify($event)"></app-event-bus>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
@@ -6,7 +7,7 @@
   </div>
   <div class="row">
     <div class="col-xs-12">
-      <app-tabs [subscribe]="subscribe"></app-tabs>
+      <app-numbers [subscribe]="subscribe"></app-numbers>
     </div>
   </div>
 </div>

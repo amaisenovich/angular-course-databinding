@@ -1,0 +1,5 @@
+<div *ngIf="numbers.length" class="numbers">
+  <app-panes>
+    <app-number *ngFor="let number of numbers" [number]="number"></app-number>
+  </app-panes>
+</div>
