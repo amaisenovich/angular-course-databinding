@@ -1,0 +1,4 @@
+<div class="game">
+  <button class="btn btn-success" (click)="onStart()" [disabled]="intervalId">Start</button>
+  <button class="btn btn-danger" (click)="onStop()" [disabled]="!intervalId">Stop</button>
+</div>

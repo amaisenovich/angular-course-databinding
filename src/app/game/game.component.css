@@ -1,0 +1,17 @@
+.game {
+  padding: 10px;
+  background-color: #facc15;
+  border-radius: 5px;
+  margin: 10px;
+  justify-content: center;
+  display: flex;
+}
+
+.game button {
+  display: inline-flex;
+}
+
+.game button:not(:last-child) {
+  margin-right: 5px;
+}
+

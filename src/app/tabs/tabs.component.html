@@ -1,0 +1,7 @@
+<div *ngIf="numbers.length" class="tabs">
+  <ul class="list-group">
+    <li *ngFor="let number of numbers" class="list-group-item">
+      <app-tab>{{ number }}</app-tab>
+    </li>
+  </ul>
+</div>
